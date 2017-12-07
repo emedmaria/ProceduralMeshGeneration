@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class AllTheTriangles : AbstractMeshGenerator {
 
-	protected override void SetMeshNums()
+    [SerializeField]
+    private Vector3[] vs = new Vector3[3]; //Going from vertex 0 to 1 to 2 only works if they are positioned, so that the progression is Clockwise. 
+
+    protected override void SetMeshNums()
 	{
 		numVertices = 3;
 		numTriangles = 3;
@@ -40,21 +42,8 @@ public class AllTheTriangles : AbstractMeshGenerator {
 		}
     }
 
-	protected override void SetNormals()
-	{
-	}
-
-	protected override void SetTangents()
-	{
-	}
-
-	protected override void SetUVs()
-	{
-
-	}
-
-	protected override void SetVertecColours()
-	{
-
-	}
+	protected override void SetNormals(){}
+	protected override void SetTangents(){}
+	protected override void SetUVs(){}
+	protected override void SetVertecColours(){}
 }
